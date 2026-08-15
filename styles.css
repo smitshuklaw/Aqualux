@@ -1290,6 +1290,826 @@ button {
 }
 
 /* ==========================================================================
+   Contact Page Styles
+   ========================================================================== */
+.contact-page-main {
+  flex: 1;
+  padding: 40px 0 70px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-grid-container {
+  display: grid;
+  grid-template-columns: 1.22fr 0.78fr;
+  gap: 36px;
+  align-items: stretch;
+}
+
+/* Left Column: Form Card */
+.contact-form-card {
+  background-color: var(--c-bg-white);
+  border-radius: 18px;
+  padding: 46px 42px;
+  box-shadow: 0 4px 20px rgba(22, 35, 38, 0.04);
+  border: 1px solid rgba(22, 35, 38, 0.05);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.contact-form-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.2vw, 2.65rem);
+  font-weight: 800;
+  color: var(--c-dark);
+  margin-bottom: 30px;
+  letter-spacing: -0.02em;
+}
+
+.contact-page-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.contact-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.contact-field-group label {
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-blue-deep);
+}
+
+.contact-field-group input,
+.contact-field-group textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 13px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(22, 35, 38, 0.18);
+  background-color: #FAFCFD;
+  color: var(--c-dark);
+  outline: none;
+  transition: border-color var(--tr-fast), box-shadow var(--tr-fast), background-color var(--tr-fast);
+}
+
+.contact-field-group input:focus,
+.contact-field-group textarea:focus {
+  border-color: var(--c-blue-deep);
+  box-shadow: 0 0 0 3px rgba(20, 93, 145, 0.14);
+  background-color: #FFFFFF;
+}
+
+.contact-field-group textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.55;
+}
+
+.contact-form-submit-wrap {
+  margin-top: 6px;
+}
+
+.btn-inquire-submit {
+  background-color: #145D91;
+  color: var(--c-bg-white);
+  padding: 13px 32px;
+  font-size: 0.96rem;
+  font-weight: 600;
+  border-radius: var(--radius-btn);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all var(--tr-smooth);
+  box-shadow: 0 4px 12px rgba(20, 93, 145, 0.2);
+}
+
+.btn-inquire-submit:hover {
+  background-color: #0E4870;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-btn);
+}
+
+.contact-success-notification {
+  display: none;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.contact-success-notification .success-icon {
+  width: 58px;
+  height: 58px;
+  background-color: #10B981;
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin: 0 auto 16px;
+}
+
+.contact-success-notification h3 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--c-dark);
+  margin-bottom: 8px;
+}
+
+.contact-success-notification p {
+  color: var(--c-text-muted);
+  font-size: 0.95rem;
+}
+
+/* Right Column: Contact Details & Map Card */
+.contact-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-details-card {
+  background-color: var(--c-dark);
+  border-radius: 18px;
+  padding: 38px 34px;
+  color: var(--c-bg-white);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  box-shadow: 0 10px 30px rgba(22, 35, 38, 0.12);
+}
+
+.contact-details-title {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--c-bg-white);
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+
+.contact-info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-info-label {
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--c-blue-mid);
+}
+
+.contact-info-val,
+.contact-info-val a {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  transition: color var(--tr-fast);
+}
+
+.contact-info-val a:hover {
+  color: var(--c-blue-mid);
+}
+
+.contact-info-address {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #C2D6DF;
+}
+
+.contact-info-coverage {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #C2D6DF;
+}
+
+.contact-map-card {
+  background-color: var(--c-arch-bg);
+  border-radius: 18px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(86, 165, 221, 0.22);
+  position: relative;
+  overflow: hidden;
+}
+
+.map-placeholder-label {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: var(--c-text-subtle);
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   About Page Styles
+   ========================================================================== */
+.about-page-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* About Hero */
+.about-hero-section {
+  padding: 30px 0 60px;
+}
+
+.about-hero-container {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.about-hero-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 580px;
+}
+
+.about-eyebrow {
+  margin-bottom: 22px;
+}
+
+.about-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 5.2vw, 4.4rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--c-dark);
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-title-line {
+  display: block;
+}
+
+.about-hero-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 520px;
+}
+
+.about-desc-p {
+  font-family: var(--font-body);
+  font-size: 1.04rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--c-text-muted);
+}
+
+.about-hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-arch-shape {
+  width: 100%;
+  max-width: 420px;
+  height: 480px;
+  background-color: var(--c-arch-bg);
+  border-radius: 24px 24px 240px 240px;
+  border: 1px solid rgba(86, 165, 221, 0.22);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 2px 8px rgba(22, 35, 38, 0.03);
+}
+
+.about-placeholder-label {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: var(--c-text-subtle);
+  text-transform: uppercase;
+}
+
+/* Our Vision Section */
+.vision-section {
+  padding: 20px 0 60px;
+}
+
+.vision-card {
+  background-color: var(--c-dark);
+  border-radius: 18px;
+  padding: 58px 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 36px rgba(22, 35, 38, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.vision-label {
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--c-blue-mid);
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.vision-quote {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: clamp(1.45rem, 2.6vw, 1.9rem);
+  font-weight: 700;
+  color: var(--c-bg-white);
+  line-height: 1.45;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Project Workflow Section (Services Page)
+   ========================================================================== */
+.services-page-list-section {
+  padding: 40px 0 60px;
+}
+
+.project-workflow-section {
+  padding: 20px 0 80px;
+}
+
+.workflow-dark-card {
+  background-color: var(--c-dark);
+  border-radius: 20px;
+  padding: 56px 48px;
+  box-shadow: 0 14px 44px rgba(22, 35, 38, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.workflow-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 38px;
+}
+
+.workflow-main-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: var(--c-bg-white);
+  letter-spacing: -0.02em;
+}
+
+.workflow-step-badge {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--c-blue-mid);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.workflow-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 42px 38px;
+}
+
+.workflow-step-item {
+  position: relative;
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--tr-smooth);
+}
+
+.workflow-step-item:hover {
+  transform: translateY(-3px);
+}
+
+.workflow-step-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--c-blue-deep) 0%, var(--c-blue-mid) 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc((var(--step-i) - 1) * 0.15s);
+  border-radius: 2px;
+}
+
+.workflow-step-item:hover .workflow-step-line {
+  height: 3px;
+  box-shadow: 0 2px 8px rgba(86, 165, 221, 0.4);
+}
+
+.workflow-step-label {
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-blue-mid);
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc((var(--step-i) - 1) * 0.15s + 0.08s);
+}
+
+.workflow-step-title {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--c-bg-white);
+  margin-bottom: 6px;
+  line-height: 1.35;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc((var(--step-i) - 1) * 0.15s + 0.14s);
+}
+
+.workflow-step-desc {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: #A0B7C1;
+  line-height: 1.52;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc((var(--step-i) - 1) * 0.15s + 0.2s);
+}
+
+/* Activated State */
+.project-workflow-section.is-animated .workflow-step-line,
+.workflow-dark-card.is-animated .workflow-step-line,
+.workflow-step-item.animate-in .workflow-step-line {
+  transform: scaleX(1);
+}
+
+.project-workflow-section.is-animated .workflow-step-label,
+.workflow-dark-card.is-animated .workflow-step-label,
+.workflow-step-item.animate-in .workflow-step-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-workflow-section.is-animated .workflow-step-title,
+.workflow-dark-card.is-animated .workflow-step-title,
+.workflow-step-item.animate-in .workflow-step-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-workflow-section.is-animated .workflow-step-desc,
+.workflow-dark-card.is-animated .workflow-step-desc,
+.workflow-step-item.animate-in .workflow-step-desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Products Page Styles
+   ========================================================================== */
+.products-page-main {
+  flex: 1;
+  padding: 40px 0 80px;
+}
+
+/* Part 1: Product Cards Grid */
+.products-grid-section {
+  margin-bottom: 50px;
+}
+
+.products-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 28px;
+}
+
+.product-card {
+  background-color: var(--c-bg-white);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(22, 35, 38, 0.04);
+  border: 1px solid rgba(22, 35, 38, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--tr-smooth), box-shadow var(--tr-smooth);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(22, 35, 38, 0.08);
+}
+
+.product-card-visual {
+  background-color: var(--c-arch-bg);
+  height: 240px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(86, 165, 221, 0.15);
+  position: relative;
+}
+
+.product-photo-label {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--c-text-subtle);
+  text-transform: uppercase;
+}
+
+.product-card-body {
+  padding: 28px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.product-card-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--c-blue-deep);
+  margin-bottom: 4px;
+}
+
+.product-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.38rem;
+  font-weight: 800;
+  color: var(--c-dark);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.product-card-desc {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--c-text-muted);
+  line-height: 1.55;
+}
+
+/* Part 2: Product Specifications Matrix (2x2) */
+.products-spec-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.spec-box {
+  border-radius: 18px;
+  padding: 42px 38px;
+  display: flex;
+  flex-direction: column;
+}
+
+.spec-box-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+
+.spec-box-title {
+  font-family: var(--font-heading);
+  font-size: 1.55rem;
+  font-weight: 800;
+  line-height: 1.28;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+}
+
+/* Box 1: Capacity Range */
+.spec-box-capacity {
+  background-color: var(--c-dark);
+  color: var(--c-bg-white);
+  box-shadow: 0 10px 32px rgba(22, 35, 38, 0.12);
+}
+
+.spec-box-capacity .spec-box-eyebrow {
+  color: var(--c-blue-mid);
+}
+
+.spec-box-capacity .spec-box-title {
+  color: var(--c-bg-white);
+}
+
+.capacity-pills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: auto;
+}
+
+.capacity-pill {
+  background-color: #0E8EA3;
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 12px 14px;
+  border-radius: 8px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  transition: transform var(--tr-fast), background-color var(--tr-fast);
+  cursor: default;
+}
+
+.capacity-pill:hover {
+  background-color: var(--c-blue-mid);
+  transform: translateY(-2px);
+}
+
+/* Box 2: Configurations */
+.spec-box-configurations {
+  background-color: var(--c-bg-white);
+  border: 1px solid rgba(22, 35, 38, 0.06);
+  box-shadow: 0 4px 20px rgba(22, 35, 38, 0.04);
+}
+
+.spec-box-configurations .spec-box-eyebrow {
+  color: var(--c-blue-deep);
+}
+
+.spec-box-configurations .spec-box-title {
+  color: var(--c-dark);
+}
+
+.config-tags-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.config-tag {
+  background-color: #E2F2F7;
+  color: #145D91;
+  border: 1px solid #C4E3EE;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 9px 18px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Box 3: Technical Add-ons */
+.spec-box-addons {
+  background-color: var(--c-bg-white);
+  border: 1px solid rgba(22, 35, 38, 0.06);
+  box-shadow: 0 4px 20px rgba(22, 35, 38, 0.04);
+}
+
+.spec-box-addons .spec-box-eyebrow {
+  color: var(--c-blue-deep);
+}
+
+.spec-box-addons .spec-box-title {
+  color: var(--c-dark);
+  margin-bottom: 18px;
+}
+
+.addons-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.addon-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(22, 35, 38, 0.07);
+}
+
+.addon-item:last-child {
+  border-bottom: none;
+}
+
+.addon-diamond {
+  width: 7px;
+  height: 7px;
+  background-color: #0E8EA3;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.addon-text {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--c-dark);
+}
+
+/* Box 4: Customization */
+.spec-box-customization {
+  background-color: var(--c-arch-bg);
+  border-radius: 18px;
+  border: 1px solid rgba(86, 165, 221, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 34px 34px;
+}
+
+.customization-visual-placeholder {
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px dashed rgba(86, 165, 221, 0.3);
+}
+
+.customization-photo-label {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--c-text-subtle);
+  text-transform: uppercase;
+}
+
+.customization-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.customization-content .spec-box-eyebrow {
+  color: var(--c-blue-deep);
+  margin-bottom: 4px;
+}
+
+.customization-quote {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--c-dark);
+  line-height: 1.42;
+}
+
+/* ==========================================================================
    Responsive Breakpoints
    ========================================================================== */
 @media (max-width: 1080px) {
@@ -1323,6 +2143,26 @@ button {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px 24px;
   }
+
+  .workflow-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
+  }
+
+  .products-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .products-spec-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .contact-grid-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 }
 
 @media (max-width: 880px) {
@@ -1345,6 +2185,20 @@ button {
   .hero-container {
     grid-template-columns: 1fr;
     gap: 50px;
+  }
+
+  .about-hero-container {
+    grid-template-columns: 1fr;
+    gap: 46px;
+  }
+
+  .about-arch-shape {
+    height: 400px;
+    max-width: 360px;
+  }
+
+  .vision-card {
+    padding: 44px 28px;
   }
 
   .hero-content {
@@ -1445,6 +2299,50 @@ button {
   .steps-grid {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+
+  .workflow-dark-card {
+    padding: 34px 22px;
+  }
+
+  .workflow-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .products-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .product-card-visual {
+    height: 200px;
+  }
+
+  .spec-box {
+    padding: 28px 22px;
+  }
+
+  .capacity-pills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .contact-form-card {
+    padding: 28px 20px;
+  }
+
+  .contact-form-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .contact-details-card {
+    padding: 28px 22px;
+  }
+
+  .btn-inquire-submit {
+    width: 100%;
   }
 
   .site-footer {

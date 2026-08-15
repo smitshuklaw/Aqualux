@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products &amp; Treatment Systems | Aqualux Water</title>
+  <meta name="description" content="Explore industrial Reverse Osmosis (RO), ETP, STP, Softening, Ultrafiltration, and Demineralization plants built to spec by Aqualux Water across India.">
+  
+  <!-- Google Fonts: Playfair Display (Headings), Manrope (Body/UI), Archivo (Banner) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header Navigation -->
+    <header class="site-header">
+      <div class="header-inner container">
+        <!-- Logo -->
+        <a href="index.html" class="brand-logo" aria-label="Aqualux Water Home">
+          <img src="logo.png" alt="Aqualux Water - AN ISO 9001:2008 Company - The Good Water People" class="logo-img">
+        </a>
+
+        <!-- Desktop Navigation (Products is active) -->
+        <nav class="main-nav" aria-label="Primary Navigation">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="products.html" class="nav-link active">Products</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header Action Button -->
+        <div class="header-actions">
+          <button class="btn btn-inquire" id="openInquireModal">Inquire</button>
+          <!-- Mobile Menu Toggle Button -->
+          <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-list">
+          <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+          <li><a href="products.html" class="mobile-nav-link active">Products</a></li>
+          <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+          <li><a href="about.html" class="mobile-nav-link">About</a></li>
+          <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+          <li class="mobile-btn-wrap">
+            <button class="btn btn-inquire btn-block" id="mobileInquireBtn">Inquire</button>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Main Products Page Content -->
+    <main class="products-page-main">
+      
+      <!-- Part 1: 6 Product Cards Grid -->
+      <section class="products-grid-section">
+        <div class="container">
+          <div class="products-cards-grid">
+            
+            <!-- Card 1: RO Plants -->
+            <div class="product-card">
+              <div class="product-card-visual" role="img" aria-label="RO plant photo placeholder">
+                <span class="product-photo-label">[ RO plant photo ]</span>
+              </div>
+              <div class="product-card-body">
+                <span class="product-card-eyebrow">MEMBRANE</span>
+                <h2 class="product-card-title">Reverse Osmosis (RO) Plants</h2>
+                <p class="product-card-desc">High-purity water through advanced membrane filtration.</p>
+              </div>
+            </div>
+
+            <!-- Card 2: ETP Plants -->
+            <div class="product-card">
+              <div class="product-card-visual" role="img" aria-label="ETP photo placeholder">
+                <span class="product-photo-label">[ ETP photo ]</span>
+              </div>
+              <div class="product-card-body">
+                <span class="product-card-eyebrow">INDUSTRIAL</span>
+                <h2 class="product-card-title">Effluent Treatment Plants</h2>
+                <p class="product-card-desc">Industrial wastewater treatment built for compliance.</p>
+              </div>
+            </div>
+
+            <!-- Card 3: STP Plants -->
+            <div class="product-card">
+              <div class="product-card-visual" role="img" aria-label="STP photo placeholder">
+                <span class="product-photo-label">[ STP photo ]</span>
+              </div>
+              <div class="product-card-body">
+                <span class="product-card-eyebrow">SEWAGE</span>
+                <h2 class="product-card-title">Sewage Treatment Plants</h2>
+                <p class="product-card-desc">Domestic and commercial sewage processing systems.</p>
+              </div>
+            </div>
+
+            <!-- Card 4: Water Softening Systems -->
+            <div class="product-card">
+              <div class="product-card-visual" role="img" aria-label="Softener photo placeholder">
+                <span class="product-photo-label">[ softener photo ]</span>
+              </div>
+              <div class="product-card-body">
+                <span class="product-card-eyebrow">PROCESS</span>
+                <h2 class="product-card-title">Water Softening Systems</h2>
+                <p class="product-card-desc">Hardness removal for process and boiler-feed water.</p>
+              </div>
+            </div>
+
+            <!-- Card 5: Ultrafiltration Systems -->
+            <div class="product-card">
+              <div class="product-card-visual" role="img" aria-label="UF skid photo placeholder">
+                <span class="product-photo-label">[ UF skid photo ]</span>
+              </div>
+              <div class="product-card-body">
+                <span class="product-card-eyebrow">FILTRATION</span>
+                <h2 class="product-card-title">Ultrafiltration Systems</h2>
+                <p class="product-card-desc">Fine particulate and turbidity removal for clean output.</p>
+              </div>
+            </div>
+
+            <!-- Card 6: Demineralization Plants -->
+            <div class="product-card">
+              <div class="product-card-visual" role="img" aria-label="DM plant photo placeholder">
+                <span class="product-photo-label">[ DM plant photo ]</span>
+              </div>
+              <div class="product-card-body">
+                <span class="product-card-eyebrow">ION EXCHANGE</span>
+                <h2 class="product-card-title">Demineralization Plants</h2>
+                <p class="product-card-desc">Ion-exchange systems for ultra-pure water requirements.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Part 2: Product Specifications & Capabilities Matrix (2x2 Grid) -->
+      <section class="products-spec-section">
+        <div class="container">
+          <div class="products-spec-grid">
+            
+            <!-- Box 1: Capacity Range (Dark Card) -->
+            <div class="spec-box spec-box-capacity">
+              <span class="spec-box-eyebrow">CAPACITY RANGE [LPH]</span>
+              <h3 class="spec-box-title">From 250 to 5000 LPH &mdash; and beyond on request.</h3>
+              <div class="capacity-pills-grid">
+                <div class="capacity-pill">500 LPH</div>
+                <div class="capacity-pill">1000 LPH</div>
+                <div class="capacity-pill">2000 LPH</div>
+                <div class="capacity-pill">3000 LPH</div>
+                <div class="capacity-pill">4000 LPH</div>
+                <div class="capacity-pill">5000 LPH</div>
+              </div>
+            </div>
+
+            <!-- Box 2: Configurations (White Card) -->
+            <div class="spec-box spec-box-configurations">
+              <span class="spec-box-eyebrow">CONFIGURATIONS</span>
+              <h3 class="spec-box-title">Built the way your site needs it.</h3>
+              <div class="config-tags-wrap">
+                <span class="config-tag">Fully Automatic</span>
+                <span class="config-tag">Semi-Automatic</span>
+                <span class="config-tag">Mobile</span>
+                <span class="config-tag">Skid-Mounted</span>
+                <span class="config-tag">Site-Built</span>
+              </div>
+            </div>
+
+            <!-- Box 3: Technical Add-ons (White Card with List) -->
+            <div class="spec-box spec-box-addons">
+              <span class="spec-box-eyebrow">TECHNICAL ADD-ONS</span>
+              <h3 class="spec-box-title">Built to spec, ready for scale.</h3>
+              <ul class="addons-list">
+                <li class="addon-item">
+                  <span class="addon-diamond"></span>
+                  <span class="addon-text">PLC Based Automation</span>
+                </li>
+                <li class="addon-item">
+                  <span class="addon-diamond"></span>
+                  <span class="addon-text">SCADA Monitoring</span>
+                </li>
+                <li class="addon-item">
+                  <span class="addon-diamond"></span>
+                  <span class="addon-text">Energy Efficient Design</span>
+                </li>
+                <li class="addon-item">
+                  <span class="addon-diamond"></span>
+                  <span class="addon-text">Compact Skid-Mounted Systems</span>
+                </li>
+                <li class="addon-item">
+                  <span class="addon-diamond"></span>
+                  <span class="addon-text">Low Maintenance Operation</span>
+                </li>
+                <li class="addon-item">
+                  <span class="addon-diamond"></span>
+                  <span class="addon-text">SS / MS-FRP Construction Options</span>
+                </li>
+                <li class="addon-item">
+                  <span class="addon-diamond"></span>
+                  <span class="addon-text">Containerized Systems Available</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Box 4: Customization (Soft Tinted Card) -->
+            <div class="spec-box spec-box-customization">
+              <div class="customization-visual-placeholder">
+                <span class="customization-photo-label">[ skid-mounted system photo ]</span>
+              </div>
+              <div class="customization-content">
+                <span class="spec-box-eyebrow">CUSTOMIZATION</span>
+                <blockquote class="customization-quote">
+                  Every system is custom-designed around your process, water quality parameters, automation level and operational capacity.
+                </blockquote>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Main Footer -->
+    <footer class="site-footer" id="contact">
+      <div class="container">
+        <!-- Footer Main Content -->
+        <div class="footer-main-grid">
+          <!-- Column 1: Brand -->
+          <div class="footer-col footer-col-brand">
+            <h3 class="footer-brand-title">AWWT</h3>
+            <p class="footer-brand-desc">
+              Manufacturer, service &amp; sales — complete water and wastewater treatment solutions across India.
+            </p>
+          </div>
+
+          <!-- Column 2: Navigate -->
+          <div class="footer-col footer-col-nav">
+            <h4 class="footer-heading">NAVIGATE</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact -->
+          <div class="footer-col footer-col-contact">
+            <h4 class="footer-heading">CONTACT</h4>
+            <div class="footer-contact-info">
+              <p><a href="tel:+919824312411">+91 98243 12411</a></p>
+              <p><a href="tel:+919687659349">+91 96876 59349</a></p>
+              <p>Gujarat, India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div class="container footer-bottom-inner">
+          <p class="footer-copyright">&copy; 2026 Aqualux Waste Water Technology Pvt. Ltd.</p>
+          <p class="footer-tagline">MANUFACTURER &middot; SERVICE &middot; SALES</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Interactive Inquire Modal -->
+  <div class="modal-backdrop" id="inquireModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModalBtn" aria-label="Close dialog">&times;</button>
+      <div class="modal-header">
+        <span class="modal-badge">Aqualux Water Solutions</span>
+        <h2 id="modalTitle" class="modal-title">Request a Plant Consultation &amp; Quote</h2>
+        <p class="modal-subtitle">Direct engineering advisory for industrial water &amp; wastewater treatment systems across India.</p>
+      </div>
+      <form class="modal-form" id="inquireForm" onsubmit="event.preventDefault(); submitInquiry();">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="e.g. Rajesh Patel" required>
+          </div>
+          <div class="form-group">
+            <label for="companyName">Company / Industry</label>
+            <input type="text" id="companyName" placeholder="e.g. Pharmaceutical / Textile Plant" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="emailAddr">Work Email</label>
+            <input type="email" id="emailAddr" placeholder="name@company.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phoneNum">Phone Number</label>
+            <input type="tel" id="phoneNum" placeholder="+91 98765 43210" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="plantType">System Required</label>
+          <select id="plantType" required>
+            <option value="" disabled selected>Select water treatment solution...</option>
+            <option value="ro">Industrial Reverse Osmosis (RO) Plant</option>
+            <option value="etp">Effluent Treatment Plant (ETP)</option>
+            <option value="stp">Sewage Treatment Plant (STP)</option>
+            <option value="dm">DM &amp; Water Softening Plant</option>
+            <option value="zld">Zero Liquid Discharge (ZLD) System</option>
+            <option value="amc">Plant AMC &amp; Maintenance Services</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="capacity">Required Capacity (e.g. 5,000 LPH / 100 KLD)</label>
+          <input type="text" id="capacity" placeholder="e.g. 10,000 LPH or 50 KLD">
+        </div>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn btn-primary btn-block">Submit Inquiry</button>
+        </div>
+      </form>
+      <div class="modal-success-msg" id="modalSuccess">
+        <div class="success-icon">&#10003;</div>
+        <h3>Inquiry Received!</h3>
+        <p>Our engineering team in Gujarat will contact you within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

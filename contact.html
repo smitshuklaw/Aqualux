@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Aqualux Water</title>
+  <meta name="description" content="Get in touch with Aqualux Water for industrial water & wastewater treatment systems, plant design, quotations, and service across India.">
+  
+  <!-- Google Fonts: Playfair Display (Headings), Manrope (Body/UI), Archivo (Banner) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header Navigation -->
+    <header class="site-header">
+      <div class="header-inner container">
+        <!-- Logo -->
+        <a href="index.html" class="brand-logo" aria-label="Aqualux Water Home">
+          <img src="logo.png" alt="Aqualux Water - AN ISO 9001:2008 Company - The Good Water People" class="logo-img">
+        </a>
+
+        <!-- Desktop Navigation (Contact is active) -->
+        <nav class="main-nav" aria-label="Primary Navigation">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header Action Button -->
+        <div class="header-actions">
+          <button class="btn btn-inquire" id="openInquireModal">Inquire</button>
+          <!-- Mobile Menu Toggle Button -->
+          <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-list">
+          <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+          <li><a href="products.html" class="mobile-nav-link">Products</a></li>
+          <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+          <li><a href="about.html" class="mobile-nav-link">About</a></li>
+          <li><a href="contact.html" class="mobile-nav-link active">Contact</a></li>
+          <li class="mobile-btn-wrap">
+            <button class="btn btn-inquire btn-block" id="mobileInquireBtn">Inquire</button>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Main Contact Page Content -->
+    <main class="contact-page-main">
+      <div class="container contact-grid-container">
+        
+        <!-- Left Column: Send an inquiry Card -->
+        <div class="contact-form-card">
+          <h1 class="contact-form-title">Send an inquiry</h1>
+          
+          <form class="contact-page-form" id="contactPageForm" onsubmit="event.preventDefault(); submitContactPageForm();">
+            <div class="contact-form-row">
+              <div class="contact-field-group">
+                <label for="contactName">NAME</label>
+                <input type="text" id="contactName" placeholder="Your name" required>
+              </div>
+              <div class="contact-field-group">
+                <label for="contactCompany">COMPANY</label>
+                <input type="text" id="contactCompany" placeholder="Company name" required>
+              </div>
+            </div>
+
+            <div class="contact-form-row">
+              <div class="contact-field-group">
+                <label for="contactEmail">EMAIL</label>
+                <input type="email" id="contactEmail" placeholder="you@company.com" required>
+              </div>
+              <div class="contact-field-group">
+                <label for="contactPhone">PHONE</label>
+                <input type="tel" id="contactPhone" placeholder="+91 ..." required>
+              </div>
+            </div>
+
+            <div class="contact-field-group full-width">
+              <label for="contactRequirement">REQUIREMENT</label>
+              <textarea id="contactRequirement" rows="5" placeholder="Tell us about your application, water source, required capacity.." required></textarea>
+            </div>
+
+            <div class="contact-form-submit-wrap">
+              <button type="submit" class="btn btn-inquire-submit" id="contactSubmitBtn">
+                <span>Submit inquiry &rarr;</span>
+              </button>
+            </div>
+          </form>
+
+          <div class="contact-success-notification" id="contactSuccessMsg">
+            <div class="success-icon">&#10003;</div>
+            <h3>Inquiry Sent Successfully!</h3>
+            <p>Thank you for reaching out. Our engineering team in Gujarat will contact you promptly.</p>
+          </div>
+        </div>
+
+        <!-- Right Column: Contact Details + Map Embed Placeholder -->
+        <div class="contact-sidebar">
+          
+          <!-- Top Card: Contact Details -->
+          <div class="contact-details-card">
+            <h2 class="contact-details-title">Contact details</h2>
+
+            <div class="contact-info-block">
+              <span class="contact-info-label">PHONE</span>
+              <p class="contact-info-val"><a href="tel:+919824312411">+91 98243 12411</a></p>
+              <p class="contact-info-val"><a href="tel:+919687659349">+91 96876 59349</a></p>
+            </div>
+
+            <div class="contact-info-block">
+              <span class="contact-info-label">ADDRESS</span>
+              <p class="contact-info-address">
+                Shed No. 8 &amp; 9 Silicon Industrial Hub, B/h NovaChemical,<br>
+                Village Moraiya, (Changodar), Ahmedabad,<br>
+                Gujarat, India - 382213.
+              </p>
+            </div>
+
+            <div class="contact-info-block">
+              <span class="contact-info-label">COVERAGE</span>
+              <p class="contact-info-coverage">PAN India delivery, installation &amp; AMC</p>
+            </div>
+          </div>
+
+          <!-- Bottom Card: Map Embed Placeholder -->
+          <div class="contact-map-card" role="img" aria-label="Map location placeholder">
+            <span class="map-placeholder-label">[ map embed ]</span>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Main Footer -->
+    <footer class="site-footer" id="contact">
+      <div class="container">
+        <!-- Footer Main Content -->
+        <div class="footer-main-grid">
+          <!-- Column 1: Brand -->
+          <div class="footer-col footer-col-brand">
+            <h3 class="footer-brand-title">AWWT</h3>
+            <p class="footer-brand-desc">
+              Manufacturer, service &amp; sales — complete water and wastewater treatment solutions across India.
+            </p>
+          </div>
+
+          <!-- Column 2: Navigate -->
+          <div class="footer-col footer-col-nav">
+            <h4 class="footer-heading">NAVIGATE</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact -->
+          <div class="footer-col footer-col-contact">
+            <h4 class="footer-heading">CONTACT</h4>
+            <div class="footer-contact-info">
+              <p><a href="tel:+919824312411">+91 98243 12411</a></p>
+              <p><a href="tel:+919687659349">+91 96876 59349</a></p>
+              <p>Gujarat, India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div class="container footer-bottom-inner">
+          <p class="footer-copyright">&copy; 2026 Aqualux Waste Water Technology Pvt. Ltd.</p>
+          <p class="footer-tagline">MANUFACTURER &middot; SERVICE &middot; SALES</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Interactive Inquire Modal (For Header Button) -->
+  <div class="modal-backdrop" id="inquireModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModalBtn" aria-label="Close dialog">&times;</button>
+      <div class="modal-header">
+        <span class="modal-badge">Aqualux Water Solutions</span>
+        <h2 id="modalTitle" class="modal-title">Request a Plant Consultation &amp; Quote</h2>
+        <p class="modal-subtitle">Direct engineering advisory for industrial water &amp; wastewater treatment systems across India.</p>
+      </div>
+      <form class="modal-form" id="inquireForm" onsubmit="event.preventDefault(); submitInquiry();">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="e.g. Rajesh Patel" required>
+          </div>
+          <div class="form-group">
+            <label for="companyName">Company / Industry</label>
+            <input type="text" id="companyName" placeholder="e.g. Pharmaceutical / Textile Plant" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="emailAddr">Work Email</label>
+            <input type="email" id="emailAddr" placeholder="name@company.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phoneNum">Phone Number</label>
+            <input type="tel" id="phoneNum" placeholder="+91 98765 43210" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="plantType">System Required</label>
+          <select id="plantType" required>
+            <option value="" disabled selected>Select water treatment solution...</option>
+            <option value="ro">Industrial Reverse Osmosis (RO) Plant</option>
+            <option value="etp">Effluent Treatment Plant (ETP)</option>
+            <option value="stp">Sewage Treatment Plant (STP)</option>
+            <option value="dm">DM &amp; Water Softening Plant</option>
+            <option value="zld">Zero Liquid Discharge (ZLD) System</option>
+            <option value="amc">Plant AMC &amp; Maintenance Services</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="capacity">Required Capacity (e.g. 5,000 LPH / 100 KLD)</label>
+          <input type="text" id="capacity" placeholder="e.g. 10,000 LPH or 50 KLD">
+        </div>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn btn-primary btn-block">Submit Inquiry</button>
+        </div>
+      </form>
+      <div class="modal-success-msg" id="modalSuccess">
+        <div class="success-icon">&#10003;</div>
+        <h3>Inquiry Received!</h3>
+        <p>Our engineering team in Gujarat will contact you within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
